@@ -38,6 +38,14 @@ body {
 
 .calculator-card {
   width: 520px;
+  padding: 15px 0;
+}
+
+.calculator-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .calculator-card__heading {
@@ -67,7 +75,6 @@ body {
 
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -117,11 +124,28 @@ input:checked + .slider:before {
 }
 /* switch css ends here */
 
+.amount-invested-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.amount-invested-wrapper span {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+  background: transparent;
+  font-size: 20px;
+}
+
 .amount-invested-input {
   width: inherit;
   height: 60px;
   flex-shrink: 0;
   border-radius: 10px;
+  padding: 0 55px;
   border: 1px solid #ececec;
   background: #f9fafb;
   text-align: right;
@@ -167,7 +191,8 @@ input:checked + .slider:before {
   transition: all 0.3s ease-out;
 }
 
-.balance-btn-gp button:hover {
+.balance-btn-gp button:hover,
+.balance-btn-gp button.selected {
   border: 1px solid #fed700;
   background-color: #fceb74;
 }
@@ -201,7 +226,8 @@ input:checked + .slider:before {
   transition: all 0.3s ease-out;
 }
 
-.timeframe-btn-gp button:hover {
+.timeframe-btn-gp button:hover,
+.timeframe-btn-gp button.selected {
   border: 1px solid #fed700;
   background-color: #fceb74;
 }
@@ -246,6 +272,7 @@ input:checked + .slider:before {
 .current-rate-input {
   margin: 10px 0;
   width: inherit;
+  padding: 0 40px;
   height: 60px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -254,6 +281,7 @@ input:checked + .slider:before {
   text-align: right;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
+  color: #000;
 }
 
 .current-rate-equivalent-label span {
@@ -346,7 +374,8 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.current-rate-wrapper button:hover {
+.current-rate-wrapper button:hover,
+.current-rate-wrapper button:active {
   opacity: 0.8;
 }
 
@@ -362,4 +391,14 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   left: 4%;
   background: transparent;
+}
+
+.current-rate-wrapper span {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+  background: transparent;
+  font-size: 20px;
 }
