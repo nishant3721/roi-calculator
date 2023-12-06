@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cakeImg from "./assets/images/cake.png"
 import './App.css';
 
 function App() {
@@ -74,7 +75,10 @@ function App() {
         </div>
 
         <div className="currency-switch-wrapper">
-          <span className='currency-switch-labels'>Cake</span>
+          <span className='currency-switch-labels cake-currency-wrapper'>
+            <img className='cake-currency-img' src={cakeImg} alt="cake-img" />
+            <span>Cake</span>
+          </span>
           <label className="switch">
             <input type="checkbox" checked={!isCakeCurrency} onChange={handleCurrencySwitch} />
             <span className="slider round"></span>

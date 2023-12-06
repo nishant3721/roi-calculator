@@ -53,6 +53,17 @@ body {
 }
 
 /* switch css starts here */
+.cake-currency-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cake-currency-img {
+  margin-right: 5px;
+  width: 16px;
+  height: auto;
+}
+
 .currency-switch-wrapper {
   margin: 10px 0;
   display: flex;
