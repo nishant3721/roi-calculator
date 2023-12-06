@@ -88,7 +88,10 @@ function App() {
         </div>
 
         <div className="amount-invested-wrapper">
-          <input className='amount-invested-input' type="number" value={amountInvested} onChange={(e) => setAmountInvested(e.target.value)} />
+          <input onClick={(e) => {
+            const newValue = e.target.value === '0' ? '' : e.target.value;
+            setAmountInvested(newValue);
+          }} className='amount-invested-input' type="number" value={amountInvested} onChange={(e) => setAmountInvested(e.target.value)} />
           <span>{isCakeCurrency ? "CAKE" : "USD"}</span>
         </div>
 
@@ -197,7 +200,10 @@ function App() {
               <path d="M1.99997 8.16675L6.33312 12.8331L17.1666 1.16647" stroke="#A2A2A2" strokeWidth="2.20614" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>}
-          <input className='current-rate-input' type="number" value={currentRate} onChange={(e) => setCurrentRate(e.target.value)} disabled={isCurrentRateEditable} />
+          <input onClick={(e) => {
+            const newValue = e.target.value === '0' ? '' : e.target.value;
+            setCurrentRate(newValue);
+          }} className='current-rate-input' type="number" value={currentRate} onChange={(e) => setCurrentRate(e.target.value)} disabled={isCurrentRateEditable} />
           <span>USD</span>
         </div>
         <div className='current-rate-equivalent-label'>
