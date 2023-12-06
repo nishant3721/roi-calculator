@@ -312,11 +312,13 @@ input:checked + .slider:before {
 }
 
 .btn-apply {
+  font-family: "Poppins", sans-serif;
   color: #fff;
   background: #000;
 }
 
 .btn-cancel {
+  font-family: "Poppins", sans-serif;
   border: 1px solid #000 !important;
 }
 /* handle button css ends here */
