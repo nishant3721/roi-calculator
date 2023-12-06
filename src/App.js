@@ -32,6 +32,7 @@ function App() {
     const timeFrameMultiplier = calculateTimeFrameMultiplier(timeframe);
     const calculatedROI = convertedInvestment * acceleratedMultiplier * tierMultiplier * timeFrameMultiplier;
     setROI(calculatedROI);
+    setActiveIndex(1)
   };
 
   const calculateTimeFrameMultiplier = (selectedTimeframe) => {
@@ -65,7 +66,7 @@ function App() {
 
         <div className="calculator-card-header">
           <h2 className='calculator-card__heading'>ROI Calculator</h2>
-          <span onClick={handleCardClose}>
+          <span style={{ cursor: "pointer" }} onClick={handleCardClose}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M1 1L10 10M10 10L19 19M10 10L19 1M10 10L1 19" stroke="#222222" strokeLinecap="round" />
             </svg>

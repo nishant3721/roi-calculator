@@ -309,6 +309,8 @@ input:checked + .slider:before {
   opacity: 0.8;
   box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.05);
   border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .btn-apply {
@@ -317,9 +319,19 @@ input:checked + .slider:before {
   background: #000;
 }
 
+.btn-apply:hover {
+  background-color: #004225;
+  border: none;
+}
+
 .btn-cancel {
   font-family: "Poppins", sans-serif;
   border: 1px solid #000 !important;
+}
+
+.btn-cancel:hover {
+  background-color: #c70039;
+  border: 1px solid transparent !important;
 }
 /* handle button css ends here */
 
