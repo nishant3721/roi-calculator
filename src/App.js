@@ -21,6 +21,7 @@ function App() {
   const handleAcceleratedToggle = () => setIsAccelerated((prevIsAccelerated) => !prevIsAccelerated);
   const handleTierSelect = (selectedTier) => setSelectedTier(selectedTier);
   const handleApplyClick = () => {
+    // This is the calculation according to me. May be, it is not right, as I'm unaware of the many concepts in ROI calculation (e.g., tier, cake, accelerated apy, etc)
     const convertedInvestment = isCakeCurrency ? 2.57 * amountInvested : amountInvested;
     const acceleratedMultiplier = isAccelerated ? 1.1 : 1;
     let tierMultiplier = 1;
