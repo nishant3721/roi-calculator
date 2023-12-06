@@ -430,6 +430,14 @@ input:checked + .slider:before {
 }
 
 /* Responsiveness */
+
+@media screen and (min-width: 768px) {
+  .amount-invested-input,
+  .current-rate-input {
+    padding: 0 75px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .calculator-card {
     width: 90%;
