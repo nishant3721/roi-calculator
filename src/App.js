@@ -67,7 +67,7 @@ function App() {
           <h2 className='calculator-card__heading'>ROI Calculator</h2>
           <span onClick={handleCardClose}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M1 1L10 10M10 10L19 19M10 10L19 1M10 10L1 19" stroke="#222222" stroke-linecap="round" />
+              <path d="M1 1L10 10M10 10L19 19M10 10L19 1M10 10L1 19" stroke="#222222" strokeLinecap="round" />
             </svg>
           </span>
         </div>
@@ -188,7 +188,7 @@ function App() {
             </svg>
           </button> : <button onClick={() => setIsCurrentRateEditable(true)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
-              <path d="M1.99997 8.16675L6.33312 12.8331L17.1666 1.16647" stroke="#A2A2A2" stroke-width="2.20614" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1.99997 8.16675L6.33312 12.8331L17.1666 1.16647" stroke="#A2A2A2" strokeWidth="2.20614" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>}
           <input className='current-rate-input' type="number" value={currentRate} onChange={(e) => setCurrentRate(e.target.value)} disabled={isCurrentRateEditable} />

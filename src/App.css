@@ -402,3 +402,31 @@ input:checked + .slider:before {
   background: transparent;
   font-size: 20px;
 }
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+  .calculator-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .amount-invested-input,
+  .current-rate-input {
+    padding: 0 20px;
+  }
+
+  .handle-btn-wrapper button {
+    padding: 14px 50px;
+  }
+
+  .timeframe-btn-gp button,
+  .balance-btn-gp button,
+  .tier-btn-gp button {
+    padding: 9px 15px;
+  }
+
+  .amount-invested-input,
+  .current-rate-input {
+    padding: 0 80px;
+  }
+}
